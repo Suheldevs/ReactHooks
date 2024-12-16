@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../Hooks/useContext/ThemeContext';
 
 function Header() {
-    console.log('Header fetched')
+    console.log('Header fetched');
+    const test = useContext(ThemeContext)
   return (
-    <div>Header</div>
+    <div>Header
+      <button onClick={test.toggleTheme}>ToggleTheme</button>
+    </div>
+
   )
 }
 
